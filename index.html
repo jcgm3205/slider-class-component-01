@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="app-container">
+
+  <!-- Page -->
+  <main class="page">
+
+    <!-- Slider  component-->
+    <div class="slider-component" id="sliderComp01" data-slider-component>
+
+      <!-- Slider  container-->
+      <div class="slides-container" data-slider-container></div>
+
+      <!-- Slider  navigation buttons-->
+      <div class="slider-nav">
+        <button class="slider-prev" data-slider-prev>
+          <i class="fas fa-angle-left"></i>
+        </button>
+        <button class="slider-next" data-slider-next>
+          <i class="fas fa-angle-right"></i>
+        </button>
+      </div>
+
+    </div>
+
+
+    <!-- Slide Template  -->
+    <template id="slideTemplate">
+      <article class="slide">
+        <img class="slide-image" src="" alt="">
+        <h2 class="slide-title"></h2>
+        <div class="slide-content">
+          <p id="slideContent"></p>
+          <div class="slide-call-to-action">
+            <a class="btn" id="slideBtn" href="/"></a>
+          </div>
+        </div>
+      </article>
+    </template>
+
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
