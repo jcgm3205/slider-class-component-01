@@ -14,7 +14,7 @@ export const data = [
         titleContent: "Avacado Bravado",
         paragraphContent: "These avacados come in two kinds: extremely hard and way too soft. There is no middle ground.",
         buttonExtraClass: "success",
-        buttonHref: "/",
+        buttonHref: "https://github.com/jcgm3205/",
         buttonContent: "Feel the Green"
     },
     {
@@ -23,7 +23,7 @@ export const data = [
         titleContent: "It’s Citrus Time",
         paragraphContent: "Go ahead. Eat way too many of these oranges. We promise they’ll burn your mouth to shreds.",
         buttonExtraClass: "warning",
-        buttonHref: "/",
+        buttonHref: "https://github.com/jcgm3205/",
         buttonContent: "Citrus Me Timbers"
     },
 ];
