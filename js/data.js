@@ -5,7 +5,7 @@ export const data = [
         titleContent: "Berry, Berry Good",
         paragraphContent: "These strawberries are so good they’ll knock your socks right off.",
         buttonExtraClass: "danger",
-        buttonHref: "/",
+        buttonHref: "https://github.com/jcgm3205/",
         buttonContent: "Get You Some"
     },
     {
