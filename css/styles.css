@@ -68,7 +68,7 @@ p {
 
 .page{
     height: 100vh;
-    padding: 100px 1rem 0;
+    padding: 6.25rem 1rem 0;
 }
 
 .btn, button{
@@ -81,8 +81,8 @@ p {
     font-family: inherit;
     font-size: 1.125rem;
     font-weight: 200;
-    height: 50px;
-    line-height: 50px;
+    height: 3.125rem;
+    line-height: 3.125rem;
     padding: 0 1rem;
     position: relative;
     text-decoration: none;
@@ -139,7 +139,6 @@ p {
     display: flex;
 
     position: relative;
-    left: 0;
 
     transition: left 0.3s ease;
 }
@@ -152,14 +151,14 @@ p {
     position: relative;
 }
 
-.slide-image{
+.slide__image{
     width: 100%;
     display: block; /* Ambas reglas importantes para el "diseño adaptativo" */
 
     opacity: 0.5;
 }
 
-.slide-title{
+.slide__title{
     padding: 1.25rem 1.25rem 0;
 
     color: #fff;
@@ -173,8 +172,8 @@ p {
 }
 
 @media screen and (min-width: 576px) {
-  .slide-title{
-    padding: 50px 50px 0;
+  .slide__title{
+    padding: 3.125rem 3.125rem 0;
     font-size: 3rem;
   }
 }
@@ -193,17 +192,17 @@ p {
 
 @media screen and (min-width: 576px) {
   .slide-content{
-    padding: 0 50px 50px;
+    padding: 0 3.125rem 3.125rem;
   }
 }
 
-.slide-content p{
+.slide__par{
     font-weight: 200;
 }
 
 @media screen and (max-width: 576px) {
 
-  .slide-content p{
+  .slide__par{
     margin-bottom: 0.5rem;
 
     font-size: 0.75rem;
@@ -211,20 +210,20 @@ p {
   
   
   .btn{
-    height: 32px;
+    height: 2rem;
     padding: 0 0.5rem;
 
     font-size: 0.875rem;
-    line-height: 32px;
+    line-height: 2rem;
   }
 }
 
 
 /* Slider navigation buttons */
-.slider-prev,
-.slider-next{
-  width: 50px;
-  height: 50px;
+.slider__prev,
+.slider__next{
+  width: 3.125rem;
+  height: 3.125rem;
   padding: 0;
   outline: none;
 
@@ -240,37 +239,37 @@ p {
   transform: translateY(-50%);
 }
 
-.slider-prev{
+.slider__prev{
   left: 1rem;
 }
 
-.slider-next{
+.slider__next{
   right: 1rem;
 }
 
 @media screen and (max-width: 576px) {
-  .slider-prev,
-  .slider-next{
-      height: 32px;
-      width: 32px;
+  .slider__prev,
+  .slider__next{
+      height: 2rem;
+      width: 2rem;
       
       font-size: 1.125rem;
   }
 
-  .slider-prev{
+  .slider__prev{
     left: 0.5rem;
   }
 
-  .slider-next{
+  .slider__next{
     right: 0.5rem;
   }
 
 }
 
-.slider-prev:hover,
-.slider-prev:focus,
-.slider-next:hover,
-.slider-next:focus{
+.slider__prev:hover,
+.slider__prev:focus,
+.slider__next:hover,
+.slider__next:focus{
   background-color: rgba(30, 31, 31, 0.6);
 }
 

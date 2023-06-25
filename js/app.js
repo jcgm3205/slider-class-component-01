@@ -7,14 +7,19 @@ const frag = document.createDocumentFragment();
 const slideTemplate = document.getElementById("slideTemplate").content;
 
 data.forEach((entry) => {
-    let clone = slideTemplate.cloneNode(true);
-    clone.querySelector(".slide-image").src = entry.imageSrc;
-    clone.querySelector(".slide-image").alt = entry.imageAlt;
-    clone.querySelector(".slide-title").textContent = entry.titleContent;
-    clone.getElementById("slideContent").textContent = entry.paragraphContent;
-    clone.getElementById("slideBtn").classList.add(entry.buttonExtraClass);
-    clone.getElementById("slideBtn").href = entry.buttonHref;
-    clone.getElementById("slideBtn").textContent = entry.buttonContent;
+    let clone = document.importNode(slideTemplate, true);
+    let slideImage = clone.querySelector(".slide__image");
+    let slideTitle = clone.querySelector(".slide__title");
+    let slidePar = clone.querySelector(".slide__par");
+    let slideBtn = clone.querySelector(".slide__btn");
+
+    slideImage.src = entry.imageSrc;
+    slideImage.alt = entry.imageAlt;
+    slideTitle.textContent = entry.titleContent;
+    slidePar.textContent = entry.paragraphContent;
+    slideBtn.classList.add(entry.buttonExtraClass);
+    slideBtn.href = entry.buttonHref;
+    slideBtn.textContent = entry.buttonContent;
 
     frag.appendChild(clone);
 });

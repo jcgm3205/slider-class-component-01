@@ -13,8 +13,22 @@
 </head>
 
 <body class="app-container">
+  <!-- Slide Template  -->
+  <template id="slideTemplate">
+    <article class="slide">
+      <img class="slide__image" src="" alt="">
+      <h2 class="slide__title"></h2>
+      <div class="slide-content">
+        <p class="slide__par"></p>
+        <div class="slide-cta">
+          <a class="btn slide__btn" href="/"></a>
+        </div>
+      </div>
+    </article>
+  </template>
 
-  <!-- Page -->
+
+  <!-- Here goes the content -->
   <main class="page">
 
     <!-- Slider  component-->
@@ -25,30 +39,15 @@
 
       <!-- Slider  navigation buttons-->
       <div class="slider-nav">
-        <button class="slider-prev" data-slider-prev>
+        <button class="slider__prev" data-slider-prev>
           <i class="fas fa-angle-left"></i>
         </button>
-        <button class="slider-next" data-slider-next>
+        <button class="slider__next" data-slider-next>
           <i class="fas fa-angle-right"></i>
         </button>
       </div>
 
     </div>
-
-
-    <!-- Slide Template  -->
-    <template id="slideTemplate">
-      <article class="slide">
-        <img class="slide-image" src="" alt="">
-        <h2 class="slide-title"></h2>
-        <div class="slide-content">
-          <p id="slideContent"></p>
-          <div class="slide-call-to-action">
-            <a class="btn" id="slideBtn" href="/"></a>
-          </div>
-        </div>
-      </article>
-    </template>
 
   </main>
 

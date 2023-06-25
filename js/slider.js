@@ -25,23 +25,11 @@ export class Slider {
         this.config.length = this.config.sliderContainer.childElementCount;
         this.config.width = this.config.sliderComponent.getBoundingClientRect().width;
 
-        this.init();
         this.initState();
+        this.init();
     }
 
     //+++++++++++++++++  Main methods  +++++++++++++++++
-    // Method -> "init"
-    init() {
-        // Event Listeners
-        window.addEventListener("resize", () => {
-            this.config.width = this.config.sliderComponent.getBoundingClientRect().width;
-        });
-        this.config.sliderComponent.addEventListener("click", (e) => { this.click(e) });
-        this.config.sliderComponent.addEventListener("touchstart", (e) => { this.touchStart(e) });
-        this.config.sliderComponent.addEventListener("touchmove", (e) => { this.touchMove(e) });
-        this.config.sliderComponent.addEventListener("touchend", (e) => { this.touchEnd(e) });
-    }
-
     //    Method: "initState":
     initState() {
         this.state = {
@@ -50,6 +38,18 @@ export class Slider {
             isSwiping: false,
             swipingDistance: 0,
         }
+    }
+
+    // Method -> "init"
+    init() {
+        // Event Listeners
+        window.addEventListener("resize", () => {
+            this.config.width = this.config.sliderComponent.getBoundingClientRect().width;
+        });
+        this.config.sliderComponent.addEventListener("click", (e) => { this.click(e) });
+        this.config.sliderComponent.addEventListener("touchstart", (e) => { this.touchStart(e) }, { passive: true });
+        this.config.sliderComponent.addEventListener("touchmove", (e) => { this.touchMove(e) }, { passive: true });
+        this.config.sliderComponent.addEventListener("touchend", (e) => { this.touchEnd(e) });
     }
 
     //    Method: "loadState":
